@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="Qz5OWA" name="PanoPlayer" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAU,buildStandalone,buildVST3"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAU,buildLV2,buildStandalone,buildVST3"
               pluginCharacteristicsValue="pluginEditorRequiresKeys" lv2Uri="https://www.yourcompany.com/plugins/PanoPlayer"
               companyName="SonicApps">
   <MAINGROUP id="RiEnrJ" name="PanoPlayer">
@@ -18,22 +18,22 @@
           file="../../Pictures/PanDroid_icon.png"/>
   </MAINGROUP>
   <MODULES>
-    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1" useGlobalPath="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="1"
             useGlobalPath="1"/>
-    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="1"
             useGlobalPath="1"/>
-    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
   </MODULES>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
@@ -68,20 +68,20 @@
         <CONFIGURATION isDebug="0" name="Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors_headless" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="/Users/bay/Developer/JUCE/modules"/>
-        <MODULEPATH id="juce_osc" path="/Users/bay/Developer/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_core" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_events" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_osc" path="../../JuceLibraryCode/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
