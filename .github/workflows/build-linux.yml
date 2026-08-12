@@ -41,7 +41,7 @@ jobs:
       - name: Build Standalone, VST3, and LV2
         run: |
           cd Builds/LinuxMakefile
-          xvfb-run make CONFIG=Release CPPFLAGS="-I/usr/include/freetype2" -j$(nproc)
+          xvfb-run -a --server-args="-screen 0 1280x1024x24" make CONFIG=Release CPPFLAGS="-I/usr/include/freetype2" -j$(nproc)
 
       - name: Compress Build Artifacts
         run: |
