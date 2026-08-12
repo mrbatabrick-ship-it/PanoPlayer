@@ -1,0 +1,4 @@
+Builds/*/build/
+Builds/*/build
+.DS_Store
+*.dmg

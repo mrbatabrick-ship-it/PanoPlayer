@@ -1,0 +1,57 @@
+name: Build JUCE PanoPlayer for Linux
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install JUCE Linux Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            libasound2-dev \
+            libjack-jackd2-dev \
+            ladspa-sdk \
+            libcurl4-openssl-dev \
+            libfreetype6-dev \
+            libx11-dev \
+            libxcomposite-dev \
+            libxcursor-dev \
+            libxext-dev \
+            libxinerama-dev \
+            libxrandr-dev \
+            libgl1-mesa-dev \
+            libglu1-mesa-dev \
+            libfontconfig1-dev \
+            webkit2gtk-4.0
+
+      - name: Build Standalone and VST3
+        run: |
+          cd Builds/LinuxMakefile
+          make CONFIG=Release -j$(nproc)
+
+      - name: Compress Build Artifacts
+        run: |
+          mkdir -p release_linux
+          cp -r Builds/LinuxMakefile/build/PanoPlayer release_linux/ 
+2>/dev/null || true
+          cp -r Builds/LinuxMakefile/build/*.vst3 release_linux/ 
+2>/dev/null || true
+          tar -czvf PanoPlayer-Linux.tar.gz -C release_linux .
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: PanoPlayer-Linux-Build
+          path: PanoPlayer-Linux.tar.gzº
+≈
